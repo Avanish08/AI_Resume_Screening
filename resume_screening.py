@@ -1,10 +1,4 @@
-"""AI Resume Screening prototype implemented from scratch with Python's stdlib.
 
-The module extracts a limited set of job-related signals from plain-text resumes,
-implements TF-IDF/cosine similarity without third-party ML packages, and creates
-an explainable candidate comparison. It is decision support, not an automated
-hiring or rejection system.
-"""
 
 from __future__ import annotations
 
@@ -16,11 +10,7 @@ from pathlib import Path
 from typing import Dict, Iterable, List, Optional, Sequence, Set, Tuple
 
 
-# ---------------------------------------------------------------------------
-# 1. Small, editable domain knowledge bases
-# ---------------------------------------------------------------------------
-# Skill aliases are intentionally transparent. Add terms that are relevant to
-# the job roles your project supports. These are not a universal skills ontology.
+
 SKILL_ALIASES: Dict[str, Sequence[str]] = {
     "Python": ("python",),
     "SQL": ("sql", "structured query language"),
@@ -52,7 +42,7 @@ SKILL_ALIASES: Dict[str, Sequence[str]] = {
     "CSS": ("css",),
 }
 
-# This small list prevents common filler words dominating document similarity.
+
 STOP_WORDS: Set[str] = {
     "a", "an", "and", "are", "as", "at", "be", "been", "being", "by",
     "for", "from", "has", "have", "had", "he", "her", "his", "i", "in",
@@ -64,8 +54,6 @@ STOP_WORDS: Set[str] = {
     "responsibilities", "responsibility", "skills", "skill", "ability", "able",
 }
 
-# The project deliberately ignores personal/demographic profile lines when
-# computing textual similarity. It does not attempt to infer protected traits.
 PERSONAL_LINE_LABELS = re.compile(
     r"^\s*(?:name|email|e-mail|phone|mobile|contact|address|location|dob|date of birth|"
     r"age|gender|sex|marital status|nationality|religion|caste|ethnicity|passport|"
@@ -76,7 +64,7 @@ EMAIL_PATTERN = re.compile(r"\b[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}\b")
 PHONE_PATTERN = re.compile(r"(?<!\w)(?:\+?\d[\d ()\-]{7,}\d)(?!\w)")
 URL_PATTERN = re.compile(r"\b(?:https?://|www\.)\S+", re.IGNORECASE)
 
-# Education vocabulary is deliberately rule-based and editable.
+
 DEGREE_PATTERNS: Dict[str, re.Pattern[str]] = {
     "phd": re.compile(r"\b(?:ph\.?d\.?|doctor of philosophy)\b", re.IGNORECASE),
     "master": re.compile(
@@ -113,9 +101,7 @@ PREFERRED_MARKERS = re.compile(
 )
 
 
-# ---------------------------------------------------------------------------
-# 2. Text preparation and explainable extraction
-# ---------------------------------------------------------------------------
+
 def read_text_file(path: str | Path) -> str:
     """Read a UTF-8 plain-text input file."""
     return Path(path).read_text(encoding="utf-8", errors="replace")
@@ -200,7 +186,7 @@ def extract_skill_requirements(job_description: str) -> Tuple[Set[str], Set[str]
             else:
                 required.add(skill)
 
-    # A required mention takes precedence if a term appears in both places.
+
     preferred -= required
     return required, preferred
 
@@ -305,9 +291,7 @@ def extract_experience_evidence(text: str) -> List[str]:
     return evidence
 
 
-# ---------------------------------------------------------------------------
-# 3. TF-IDF and cosine similarity implemented without ML libraries
-# ---------------------------------------------------------------------------
+
 def build_tfidf_vectors(documents: Sequence[str]) -> List[Dict[str, float]]:
     """Build sparse TF-IDF vectors represented as dictionaries.
 
@@ -361,9 +345,7 @@ def calculate_text_similarities(job_description: str, resumes: Sequence[str]) ->
     return [cosine_similarity(job_vector, resume_vector) for resume_vector in vectors[1:]]
 
 
-# ---------------------------------------------------------------------------
-# 4. Transparent scoring and candidate ranking
-# ---------------------------------------------------------------------------
+
 BASE_WEIGHTS = {
     "skills": 0.60,
     "text_similarity": 0.20,
