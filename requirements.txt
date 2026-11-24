@@ -1,0 +1,3 @@
+# The screening algorithm uses only Python's standard library.
+# Install Jupyter Notebook if it is not already available in your environment:
+notebook>=7.0

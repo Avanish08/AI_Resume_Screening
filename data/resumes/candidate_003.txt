@@ -1,0 +1,14 @@
+PROFILE SUMMARY
+Recent computer science graduate seeking a first full-time data role. Completed academic and personal projects.
+
+SKILLS
+Python, SQL, Microsoft Excel, Pandas, NumPy, statistics, data cleaning, data visualization, Git, and problem solving.
+
+WORK EXPERIENCE
+No full-time professional experience. Completed a six-month supervised academic project involving data analysis.
+
+EDUCATION
+Bachelor of Technology in Computer Science.
+
+PROJECTS
+Cleaned a public practice dataset with Python and Pandas, analysed it with NumPy, and prepared charts to communicate findings.

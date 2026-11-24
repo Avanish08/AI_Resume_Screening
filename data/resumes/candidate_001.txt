@@ -1,0 +1,15 @@
+PROFILE SUMMARY
+Entry-level data analyst with two years of professional experience supporting reporting and data quality tasks.
+
+SKILLS
+Python, SQL, Microsoft Excel, Power BI, Pandas, NumPy, statistics, data cleaning, data visualization, Git, and communication.
+
+WORK EXPERIENCE
+Data Analyst, Sample Analytics Ltd. — 2 years of professional experience.
+Prepared datasets, cleaned records, wrote SQL queries, used Python and Pandas for analysis, and created Power BI dashboards.
+
+EDUCATION
+Bachelor of Science in Statistics.
+
+PROJECTS
+Built a sales trend analysis project using Python, NumPy, and Matplotlib.

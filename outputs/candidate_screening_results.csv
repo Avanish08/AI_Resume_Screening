@@ -1,0 +1,5 @@
+rank,candidate_id,overall_score,skill_score,text_similarity_score,experience_score,education_score,experience_years,required_skills_matched,required_skills_missing,preferred_skills_matched,preferred_skills_missing,education_level,education_fields
+1,candidate_001,84.91,95.0,39.55,100.0,100.0,2.0,Data cleaning; Data visualization; Microsoft Excel; Python; SQL; Statistics,,Git; NumPy; Pandas; Power BI,Tableau,bachelor,Statistics
+2,candidate_003,67.87,90.0,29.37,0.0,100.0,,Data cleaning; Data visualization; Microsoft Excel; Python; SQL; Statistics,,Git; NumPy; Pandas,Power BI; Tableau,bachelor,Computer science
+3,candidate_002,46.39,42.5,24.44,100.0,50.0,4.0,Data visualization; Microsoft Excel; SQL,Data cleaning; Python; Statistics,Tableau,Git; NumPy; Pandas; Power BI,bachelor,Commerce
+4,candidate_004,20.05,12.5,2.74,100.0,0.0,3.0,Microsoft Excel,Data cleaning; Data visualization; Python; SQL; Statistics,,Git; NumPy; Pandas; Power BI; Tableau,diploma,

@@ -1,0 +1,19 @@
+JOB TITLE: Junior Data Analyst
+
+ROLE SUMMARY
+We are looking for a junior data analyst to prepare, clean, analyse, and communicate data that supports business decisions.
+
+REQUIRED SKILLS
+Python, SQL, Microsoft Excel, data cleaning, data visualization, and statistics.
+
+PREFERRED SKILLS
+Power BI, Pandas, NumPy, and Tableau are preferred. Experience with Git is a plus.
+
+EXPERIENCE REQUIREMENT
+At least 1 year of relevant work experience is required. Candidates may also demonstrate relevant experience through internships or substantial projects, which should be reviewed by a human recruiter.
+
+EDUCATION REQUIREMENT
+A bachelor's degree in Computer Science, Statistics, Mathematics, Data Science, or a related field is preferred.
+
+RESPONSIBILITIES
+Prepare datasets, validate data quality, write queries, analyse trends, create visual reports, and explain findings clearly to non-technical stakeholders.
